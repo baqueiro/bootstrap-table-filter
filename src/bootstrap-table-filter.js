@@ -123,13 +123,13 @@
                 {id: 'eq', label: '{%msg} <input class="form-control" type="text">', i18n: {msg: 'Equals'}}
             ],
             check: function(filterData, value) {
-                if (typeof filterData.lte !== 'undefined' && parseInt(value) > parseInt(filterData.lte)) {
+                if (typeof filterData.lte !== 'undefined' && parseFloat(value) > parseFloat(filterData.lte)) {
                     return false;
                 }
-                if (typeof filterData.gte !== 'undefined' && parseInt(value) < parseInt(filterData.gte)) {
+                if (typeof filterData.gte !== 'undefined' && parseFloat(value) < parseFloat(filterData.gte)) {
                     return false;
                 }
-                if (typeof filterData.eq !== 'undefined' && parseInt(value) != parseInt(filterData.eq)) {
+                if (typeof filterData.eq !== 'undefined' && parseFloat(value) != parseFloat(filterData.eq)) {
                     return false;
                 }
                 return true;
